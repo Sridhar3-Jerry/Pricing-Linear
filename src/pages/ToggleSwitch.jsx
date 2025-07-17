@@ -7,7 +7,7 @@ function ToggleSwitch() {
     <div
       onClick={() => setEnabled(!enabled)}
       className={`w-7.5 h-4 flex items-center rounded-full p-1 cursor-pointer transition-colors duration-300
-        ${enabled ? "bg-indigo-500" : "bg-gray-300"}`}
+        ${enabled ? "bg-togglebtn" : "bg-gray-300"}`}
     >
       <div
         className={`bg-white w-3 h-3 rounded-full shadow-md transform transition-transform duration-300

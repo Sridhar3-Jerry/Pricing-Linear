@@ -16,6 +16,7 @@ function PriceCards({h3,h5,p}){
             "API access"
           ],
           button: "Get started",
+          buttonstyle:"bg-white text-black"
         },
         {
           name: "Basic",
@@ -78,7 +79,7 @@ function PriceCards({h3,h5,p}){
         <div className='bg-black flex justify-center '>
             {plans.map((plan,index)=>{
                 return(
-                    <div className={`  gap-4  border border-gray-800  ${cardStyles[index]}`}  key={index}>
+                    <div className={`flex flex-col   gap-4  border border-gray-800  ${cardStyles[index]}`}  key={index}>
                         <div className='text-white p-5 flex flex-col gap-2'>
                             <h3 className='text-3xl'>{plan.name}</h3>
                             <h5 className='text-lg font-extralight'>{plan.price}</h5>
@@ -91,14 +92,14 @@ function PriceCards({h3,h5,p}){
                             {plan.features.map((feature)=>{
                                     return(
                                         <div className='flex items-center gap-1'>
-                                            <span><CheckCircleIcon className='w-6 h-4.5 text-indigo-500'/></span>
+                                            <span><CheckCircleIcon className='w-6 h-4.5 text-togglebtn'/></span>
                                             <span className='text-gray-300 text-sm font-thin'>{feature}</span>
                                         </div>
                                     )
                             })}
                         </div>
-                        <div className='flex flex-col items-center p-5  gap-2'>
-                            <button className='text-white border border-gray-700 bg-btn cursor-pointer rounded-lg p-2 w-48 hover:bg-buttonHover' >Get Started</button>
+                        <div className='flex flex-col items-center p-3  gap-2 '>
+                            <button className='text-white border border-gray-700 bg-btn cursor-pointer rounded-lg p-2 w-48 hover:bg-buttonHover ' >{plan.button}</button>
                             <a href="" className='text-white'>{plan.extra}</a>
                         </div>
                         

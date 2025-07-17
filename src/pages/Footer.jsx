@@ -75,10 +75,8 @@ function Footer(){
                             {detail.links.map((link)=>{
                                 return(
                                     
-                                        <p className=" text-sm text-gray-500 font-light cursor-pointer hover:text-white">{link}</p>
-                                    
+                                        <p className=" text-sm text-gray-500 font-light cursor-pointer hover:text-white">{link}</p> 
                                 )
-                                
                             })}
                             </div>
                         </div>
